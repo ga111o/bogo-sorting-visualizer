@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/bongo-sorting-visualizer%20/static/css/main.02e2e77f.css",
-    "main.js": "/bongo-sorting-visualizer%20/static/js/main.19cbdd77.js",
-    "static/js/488.d4a29f7d.chunk.js": "/bongo-sorting-visualizer%20/static/js/488.d4a29f7d.chunk.js",
-    "index.html": "/bongo-sorting-visualizer%20/index.html",
-    "main.02e2e77f.css.map": "/bongo-sorting-visualizer%20/static/css/main.02e2e77f.css.map",
-    "main.19cbdd77.js.map": "/bongo-sorting-visualizer%20/static/js/main.19cbdd77.js.map",
-    "488.d4a29f7d.chunk.js.map": "/bongo-sorting-visualizer%20/static/js/488.d4a29f7d.chunk.js.map"
+    "main.css": "/bongo-sorting-visualizer/static/css/main.02e2e77f.css",
+    "main.js": "/bongo-sorting-visualizer/static/js/main.2df3cd41.js",
+    "static/js/488.d4a29f7d.chunk.js": "/bongo-sorting-visualizer/static/js/488.d4a29f7d.chunk.js",
+    "index.html": "/bongo-sorting-visualizer/index.html",
+    "main.02e2e77f.css.map": "/bongo-sorting-visualizer/static/css/main.02e2e77f.css.map",
+    "main.2df3cd41.js.map": "/bongo-sorting-visualizer/static/js/main.2df3cd41.js.map",
+    "488.d4a29f7d.chunk.js.map": "/bongo-sorting-visualizer/static/js/488.d4a29f7d.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.02e2e77f.css",
-    "static/js/main.19cbdd77.js"
+    "static/js/main.2df3cd41.js"
   ]
 }
