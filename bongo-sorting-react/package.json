@@ -13,14 +13,13 @@
   "overrides": {
     "nth-check": "2.1.1"
   },
-  "resolutions": {
-    "postcss": "^8.2.10"
-  },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "deploy": "gh-pages -d build",
+    "predeploy": "npm run build"
   },
   "eslintConfig": {
     "extends": [
@@ -43,5 +42,6 @@
   "devDependencies": {
     "gh-pages": "^6.1.1",
     "react-scripts": "5.0.1"
-  }
+  },
+  "homepage": "https://ga111o.github.io/bongo-sorting-visualizer/"
 }
