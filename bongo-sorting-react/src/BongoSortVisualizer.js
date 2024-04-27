@@ -37,7 +37,7 @@ const BongoSortVisualizer = () => {
           break;
         }
       }
-      setSortAttempts((prev) => prev + 1); // 연산 횟수 증가
+      setSortAttempts((prev) => prev + 1);
     }
     setEndTime(performance.now());
     setIsSorting(false);
@@ -96,7 +96,7 @@ const BongoSortVisualizer = () => {
       <div className="stats">
         {sortAttempts > 0 && (
           <>
-            <p>Sort Attempts: {sortAttempts}</p>
+            <p>Number of Sort Attempts: {sortAttempts}</p>
             <p>Sort Time: {(endTime - startTime).toFixed(2)} ms</p>
           </>
         )}
