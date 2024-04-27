@@ -7,6 +7,9 @@ const BongoSortVisualizer = () => {
   const [isSorting, setIsSorting] = useState(false);
   const [sortSpeed, setSortSpeed] = useState(20);
   const [animationSpeed, setAnimationSpeed] = useState(100);
+  const [sortAttempts, setSortAttempts] = useState(0);
+  const [startTime, setStartTime] = useState(null);
+  const [endTime, setEndTime] = useState(null);
 
   // random arr
   const shuffleArray = async (arr, delay) => {
@@ -14,13 +17,16 @@ const BongoSortVisualizer = () => {
       const j = Math.floor(Math.random() * (i + 1));
       [arr[i], arr[j]] = [arr[j], arr[i]];
       await new Promise((resolve) => setTimeout(resolve, delay));
+      setSortAttempts((prev) => prev + 1);
       setArray([...arr]);
     }
   };
 
   // Boooongooo
   const bongoSort = async (arr, delay) => {
+    setSortAttempts(0);
     setIsSorting(true);
+    setStartTime(performance.now());
     let sorted = false;
     while (!sorted) {
       await shuffleArray(arr, delay);
@@ -31,7 +37,9 @@ const BongoSortVisualizer = () => {
           break;
         }
       }
+      setSortAttempts((prev) => prev + 1); // 연산 횟수 증가
     }
+    setEndTime(performance.now());
     setIsSorting(false);
   };
 
@@ -85,6 +93,14 @@ const BongoSortVisualizer = () => {
       <button onClick={initializeArrayWithInput} disabled={isSorting}>
         {isSorting ? "Sorting..." : "Initialize and Sort"}
       </button>
+      <div className="stats">
+        {sortAttempts > 0 && (
+          <>
+            <p>Sort Attempts: {sortAttempts}</p>
+            <p>Sort Time: {(endTime - startTime).toFixed(2)} ms</p>
+          </>
+        )}
+      </div>
       <div className="graph" style={{ display: "flex", flexDirection: "row" }}>
         {array.map((value, idx) => (
           <div
